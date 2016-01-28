@@ -65,7 +65,37 @@ public class ChooseOwnAdventure
         }
         else if (r1.equals("backwards") || r1.equals("backward"))
         {
-            
+            System.out.println("You turn around and walk a few paces before feeling a wall ahead of you. On the wall you can feel a lever that can be moved up or down.\nDo you move the lever up or down?");
+
+            r2 = keyboard.next();
+
+            if (r2.equals("up"))
+            {
+                System.out.println("As you push the lever up the wall in front of you slowly disappear up into the ceiling revealing a ladder that goes up and down.\nDo you go up or down?");
+
+                r3 = keyboard.next();
+
+                if (r3.equals("up"))
+                {
+                    System.out.println("As you start to climb the ladder you see a faint light above you, you climb higher and higher. You almost reach the top, but as you grab the 3rd to last rung with your hand it breaks.\n Your arm flails back and you fall off the ladder.\nBeing as small a passage as it was, you keep bouncing off of the ladder and the walls, eventually you hit the back of your neck against a rung which knocks you out. You die soon after you reach the bottom.");
+                }
+                else if (r3.equals("down"))
+                {
+                    System.out.println("You climb to the bottom of the ladder with no incident and set foot in a dimly lit room. You can't quite see the walls, there is jst the ladder coming down with a faint light surrounding it.\nYou take a cautious step forward abd hear a click. It seems as though the ladder is sinking into the floor. Then you realize that the ladder isn't sinking, the floor is rising! You try in vain to climb up the laddder again, as the entrance in the ceiling is now solid.\nAs the space gets tighter, you lay down and hope for the best, alas the worst comes and you are slowly and painfully crushed into a meat pancake.");
+                }
+                else
+                {
+                    System.out.println("You cannot do that and you die of a sudden brain aneurysm.");
+                }
+            }
+            else if (r2.equals("down"))
+            {
+                System.out.println("");
+            }
+            else
+            {
+                System.out.println("You cannot do that and you die of a sudden brain aneurysm.");
+            }
         }
         else
         {
