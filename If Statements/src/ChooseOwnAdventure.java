@@ -9,17 +9,16 @@ public class ChooseOwnAdventure
         String r1, r2, r3;
         
         System.out.println("Welcome to Jordan's Miniventure Game!\n");
-        keyboard.next();
         
         System.out.println("You find yourself in a pitch black hallway, you feel the walls next to you and emptiness in front and behind you.\nDo you walk forward or backwards?\n");
         r1 = keyboard.next();
         
         if (r1.equals("forwards") || r1.equals("forward"))
         {
-            System.out.println("As you stumble through the darkness you come to a door and open it, flooding the hallway with light.\nThere is a red door directly ahead of you and a trapdoor off to the left, trapdoor or red door?");
+            System.out.println("As you stumble through the darkness you come to a door and open it, flooding the hallway with light.\nThere is a red door directly ahead of you and a trapdoor off to the left, \"trapdoor\" or \"red\" door?");
             r2 = keyboard.next();
             
-            if (r2.equals("red door"))
+            if (r2.equals("red"))
             {
                 System.out.println("As you walk through the doorway, the door slams behind you.\nYou see ahead of you a pedestal with a diamond bigger than anything you ever imagined, and a door marked exit. Do you pick door or diamond?");
                 r3 = keyboard.next();
@@ -90,7 +89,22 @@ public class ChooseOwnAdventure
             }
             else if (r2.equals("down"))
             {
-                System.out.println("");
+                System.out.println("As you push the lever down the wall to your left seems to break apart and reveals a passageway. You walk through this passage and come to a room with 2 doors.\n One is marked exit and the other is unmarked. Do you choose exit or unmarked?");
+
+                r3 = keyboard.next();
+
+                if (r3.equals("exit"))
+                {
+                    System.out.println("You open the door to the outside and run off to freedom, never to look back.");
+                }
+                else if (r3.equals("unmarked"))
+                {
+                    System.out.println("As soon as you turn the knob the door swings back at you with water rushing out from behind it. It slowly fills the room, drowning you.");
+                }
+                else
+                {
+                    System.out.println("You cannot do that and you die of a sudden brain aneurysm.");
+                }
             }
             else
             {
