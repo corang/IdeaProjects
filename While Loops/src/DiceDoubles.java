@@ -9,17 +9,28 @@ public class DiceDoubles
     {
         Random r = new Random();
 
-        int d1, d2;
+        int d1, d2, rolls;
 
         d1 = 1 + r.nextInt(6);
         d2 = 1 + r.nextInt(6);
+        rolls = 1;
+
+        System.out.println("First roll: " + d1);
+        System.out.println("Second roll: " + d2);
 
         while (d1 != d2)
         {
+            d1 = 1 + r.nextInt(6);
+            d2 = 1 + r.nextInt(6);
+
+            rolls ++;
+
             System.out.println("First roll: " + d1);
             System.out.println("Second roll: " + d2);
 
             System.out.println("Total: " + (d1 + d2));
         }
+
+        System.out.println("That took " + rolls + " rolls.");
     }
 }
